@@ -93,15 +93,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .room-btn{display:block;margin-top:1.2rem;text-align:center;border:0.5px solid rgba(184,149,90,0.4);color:var(--gold);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.6rem;border-radius:1px;transition:all 0.3s}
 .room-btn:hover{background:var(--gold);color:var(--dark)}
 
-/* ACTIVITIES */
-.activities{background:var(--mid)}
-.act-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:4rem}
-.act-item{padding:2rem 1.5rem;border:0.5px solid rgba(184,149,90,0.15);border-radius:2px;text-align:center;transition:all 0.3s}
-.act-item:hover{border-color:var(--gold);background:#FFFFFF}
-.act-icon{font-size:2rem;margin-bottom:1rem}
-.act-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem}
-.act-desc{font-size:0.75rem;color:var(--muted);line-height:1.6}
-
 /* GALLERY */
 .gallery{background:var(--dark);padding:7rem 0}
 .gallery-label{text-align:center;padding:0 4rem}
@@ -183,6 +174,27 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
 .slide-dots{display:flex;gap:0.6rem;justify-content:center;margin-top:2rem}
 .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s;border:none}
 .dot.active{background:var(--gold);transform:scale(1.3)}
+
+.gallery-btn{
+  display:inline-block;
+  margin-top:1.5rem;
+  font-size:0.72rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--white);
+  border:0.5px solid rgba(255,255,255,0.5);
+  padding:0.7rem 1.8rem;
+  border-radius:2px;
+  text-decoration:none;
+  transition:all 0.3s;
+  backdrop-filter:blur(4px);
+  background:rgba(255,255,255,0.08);
+}
+.gallery-btn:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:#000;
+}
 </style>
 </head>
 <body>
@@ -193,7 +205,7 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
   <div class="nav-links">
     <a href="#about">Бидний тухай</a>
     <a href="#rooms">Өрөөнүүд</a>
-    <a href="#activities">Үйл ажиллагаа</a>
+    
     <a href="gallery.html" target="_blank">Зургийн цомог</a>
     <a href="#partners">Хамтрагчид</a>
     <a href="#contact">Холбоо барих</a>
@@ -211,7 +223,7 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="toggleMenu()">Бидний тухай</a>
   <a href="#rooms" onclick="toggleMenu()">Өрөөнүүд</a>
-  <a href="#activities" onclick="toggleMenu()">Үйл ажиллагаа</a>
+  
   <a href="gallery.html" target="_blank" onclick="toggleMenu()">Зургийн цомог</a>
   <a href="#partners" onclick="toggleMenu()">Хамтрагчид</a>
   <a href="#contact" onclick="toggleMenu()">Захиалга өгөх</a>
@@ -262,7 +274,6 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
       <p class="hero-sub">Морин аялал · Жимс түүх · Амьтад харах · Disco</p>
     </div>
     </div>
-    <a href="#contact" class="hero-cta">Захиалга өгөх · Book Now</a>
     <!-- Dots -->
     <div class="slide-dots">
       <span class="dot active" onclick="goSlide(0)"></span>
@@ -270,6 +281,7 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
       <span class="dot" onclick="goSlide(2)"></span>
       <span class="dot" onclick="goSlide(3)"></span>
     </div>
+    <a href="gallery.html" target="_blank" class="gallery-btn">🖼 Зургийн цомог үзэх · View Gallery</a>
   </div>
   <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
@@ -278,55 +290,7 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
 </section>
 
 <!-- ABOUT -->
-<section class="about section" id="about">
-  <div class="section-inner">
-    <div class="label">Бидний тухай · About Us</div>
-    <h2 class="heading">Байгалийн гоо сайхны<br><em>дунд амрах газар</em></h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Ангийн зугаалга уу? Гэр бүлийн аялал уу? Найз нөхдөөрөө уу? — Бүгдэд тохиромжтой! Их Монгол Жуулчны Бааз 2007 оноос хойш 18 жилийн туршид зочдоо угтан авч байна. Хангайн нурууны цэнгэг агаарт 3–8 гэр, модон байшинд буун, өдөрт гурван удаа жинхэнэ малчны гараар хийсэн хоол амтлаарай. Манай хөршийн малчдаас шууд авсан уурим, зөөхий, тараг, сүү, зуушны хамт Монголын жинхэнэ амтыг мэдрэх цаг ирлээ.</p>
-        <p>School trips, family getaways, friend groups, or international travellers — everyone is welcome at Ikh Mongol! Nestled in the Khangai Mountains 14 km from Uliastai, we have been hosting guests for 18 years. Stay in traditional gers or cozy wooden cabins, enjoy 3 homemade meals daily, and taste fresh dairy straight from our neighbouring herders — urum, zuukhai, tarag, and milk like nowhere else.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <div class="stat-num">24</div>
-            <div class="stat-label">Гэр · Ger Cabins</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">18</div>
-            <div class="stat-label">Жилийн туршлага · Years</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">4.9</div>
-            <div class="stat-label">Үнэлгээ · Rating</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">12+</div>
-            <div class="stat-label">Үйл ажиллагаа · Activities</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="about-img-frame">
-          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.6" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="sunG" cx="50%" cy="30%" r="50%">
-                <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.3"/>
-                <stop offset="100%" stop-color="#0d2016" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <rect width="400" height="500" fill="url(#sunG)"/>
-            <path d="M0,500 L0,320 L40,280 L80,310 L130,240 L180,270 L220,200 L260,250 L300,220 L340,260 L380,230 L400,250 L400,500 Z" fill="#2C1F0A"/>
-            <path d="M0,500 L0,400 L60,370 L130,390 L200,350 L270,380 L340,355 L400,370 L400,500 Z" fill="#111f16"/>
-            <ellipse cx="200" cy="440" rx="180" ry="30" fill="#3A2810" opacity="0.5"/>
-            <circle cx="200" cy="60" r="18" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
-            <circle cx="200" cy="60" r="10" fill="#C9A84C" opacity="0.15"/>
-          </svg>
-          <p class="about-quote">Монгол тал нутгийн агуу сүр жавхлан, усны дуу чимээ, одод мандсан тэнгэр.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ROOMS -->
 <section class="rooms section" id="rooms">
@@ -341,7 +305,8 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
         <div class="room-body">
           <div class="room-name">Уламжлалт Гэр</div>
           <div class="room-desc">1 гэрт 5–6 хүн багтах боломжтой. Монгол уламжлалт гэрийн дотоод засал, дулаан зуух. Өдөрт 3 удаа хоол хүнс багтсан. Traditional Mongolian ger sleeping 5–6 guests. Authentic décor, wood-burning stove, 3 meals daily included.</div>
-          <div class="room-price">₮180,000 <span>/ шөнө · night</span></div>
+          <div class="room-price">₮70,000 <span>/ хүн / хоног</span></div>
+          <div style="font-size:0.72rem;color:var(--gold);letter-spacing:0.08em;margin-top:0.4rem;opacity:0.9">✓ Өдрийн 3 хоол · Тараг · Уурим багтсан</div>
           <div class="room-features">
             <span class="feat-tag">5–6 хүн</span>
             <span class="feat-tag">Зуух</span>
@@ -357,7 +322,8 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
         <div class="room-body">
           <div class="room-name">Модон Байшин</div>
           <div class="room-desc">1 байшинд 2–4 хүн багтах боломжтой. Байгалийн ой модоор бүтээсэн тухтай байшин. Өдөрт 3 удаа хоол хүнс багтсан. Wooden cabin sleeping 2–4 guests, built with natural timber. 3 meals per day included.</div>
-          <div class="room-price">₮280,000 <span>/ шөнө · night</span></div>
+          <div class="room-price">₮60,000 <span>/ хүн / хоног</span></div>
+          <div style="font-size:0.72rem;color:var(--gold);letter-spacing:0.08em;margin-top:0.4rem;opacity:0.9">✓ Өдрийн 3 хоол · Тараг · Уурим багтсан</div>
           <div class="room-features">
             <span class="feat-tag">2–4 хүн</span>
             <span class="feat-tag">Халаалт</span>
@@ -373,7 +339,8 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
         <div class="room-body">
           <div class="room-name">Бүлгийн Захиалга</div>
           <div class="room-desc">Ангийн зугаалга, гэр бүлийн аялал, найз нөхдийн бүлэг, ангийн уулзалт, гадаад жуулчдыг угтах — бүгдэд зориулсан тусгай багц. Нийт 30–48 хүн багтах боломжтой. School outings, family reunions, friend trips, international tours — book 3–8 gers for 30–48 guests with special group pricing.</div>
-          <div class="room-price">₮450,000 <span>/ шөнө · night</span></div>
+          <div class="room-price" style="font-size:1rem;">Үнийн санал авах</div>
+          <div style="font-size:0.72rem;color:var(--gold);letter-spacing:0.08em;margin-top:0.4rem;opacity:0.9">📞 9492 8686 · 8946 1111</div>
           <div class="room-features">
             <span class="feat-tag">3–8 гэр</span>
             <span class="feat-tag">30–48 хүн</span>
@@ -388,23 +355,7 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
   </div>
 </section>
 
-<!-- ACTIVITIES -->
-<section class="activities section" id="activities">
-  <div class="section-inner">
-    <div class="label">Үйл ажиллагаа · Activities</div>
-    <h2 class="heading">Байгальд <em>нэгдэх боломж</em></h2>
-    <div class="act-grid">
-      <div class="act-item"><div class="act-icon">🏇</div><div class="act-name">Морин аялал</div><div class="act-desc">Horse Trekking — Уулын бэл хөндийгөөр морин дээр аялах</div></div>
-      <div class="act-item"><div class="act-icon">🌿</div><div class="act-name">Уулд явж жимс түүх</div><div class="act-desc">Foraging — Хангайн уулын энгэрээс зэрлэг жимс, ургамал түүх</div></div>
-      <div class="act-item"><div class="act-icon">🦅</div><div class="act-name">Байгалийн амьтад харах</div><div class="act-desc">Wildlife Watching — Хангайн нурууны ан амьтад, шувуудыг ажиглах</div></div>
-      <div class="act-item"><div class="act-icon">🪩</div><div class="act-name">Орой бүр Disco</div><div class="act-desc">Ангийнхаа найзуудтай, гэр бүлийнхэнтэй хамт орой бүр disco! Байгалийн тэвэрт хөгжмийн аялгуунд бүжиглэх — энэ аяллын хамгийн тод дурсамж болно.</div></div>
-      <div class="act-item"><div class="act-icon">🥾</div><div class="act-name">Явган аялал</div><div class="act-desc">Hiking — Ойн зам дагуух дуусашгүй аялал</div></div>
-      <div class="act-item"><div class="act-icon">🥛</div><div class="act-name">Малчны цагаан идээ</div><div class="act-desc">Хөршийн малчдаас шууд авсан уурим, зөөхий, тараг, сүү — жинхэнэ Монгол амт. Өдөрт 3 удаа гарын авцтай хоол багтана.</div></div>
-      <div class="act-item"><div class="act-icon">🧘</div><div class="act-name">Тайвшрал</div><div class="act-desc">Wellness — Байгалийн цэнгэг агаарт амар амгалан</div></div>
-      <div class="act-item"><div class="act-icon">📸</div><div class="act-name">Зураг авах</div><div class="act-desc">Photography — Хангайн байгалийн гоо сайхнийг дүрслэх</div></div>
-    </div>
-  </div>
-</section>
+
 
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
@@ -549,7 +500,7 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
   <div class="footer-links">
     <a href="#about">Бидний тухай</a>
     <a href="#rooms">Өрөөнүүд</a>
-    <a href="#activities">Үйл ажиллагаа</a>
+    
     <a href="#partners">Хамтрагчид</a>
     <a href="#contact">Холбоо барих</a>
   </div>
