@@ -12,20 +12,20 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --gold:#C8922A;
-  --gold-light:#E2B96F;
-  --dark:#1C1510;
-  --mid:#2E2218;
-  --cream:#F2E8D5;
-  --muted:#9C8E7A;
-  --white:#FDF7EE;
+  --gold:#C9A84C;
+  --gold-light:#E8D5A3;
+  --dark:#0D0D0D;
+  --mid:#171717;
+  --cream:#F0F0F0;
+  --muted:#888888;
+  --white:#FFFFFF;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Jost',sans-serif;background:#1C1510;color:var(--cream);overflow-x:hidden}
+body{font-family:'Jost',sans-serif;background:#0D0D0D;color:var(--cream);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(28,21,16,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(200,146,42,0.25);transition:padding 0.3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(201,168,76,0.3);transition:padding 0.3s}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;letter-spacing:0.12em;color:var(--gold);display:flex;align-items:center;gap:0.7rem}
 .nav-links{display:flex;gap:2.5rem;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);opacity:0.8}
 .nav-links a{transition:color 0.2s,opacity 0.2s}
@@ -33,16 +33,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-right{display:flex;align-items:center;gap:1.5rem}
 .nav-lang{font-size:0.72rem;letter-spacing:0.1em;color:var(--gold);cursor:pointer;border:0.5px solid var(--gold);padding:0.3rem 0.8rem;border-radius:2px;transition:all 0.3s;background:transparent}
 .nav-lang:hover{background:var(--gold);color:var(--dark)}
-.nav-book{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--gold);color:var(--dark);padding:0.4rem 1.2rem;border-radius:2px;transition:all 0.3s;font-weight:500}
+.nav-book{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--gold);color:#000000;padding:0.4rem 1.2rem;border-radius:2px;transition:all 0.3s;font-weight:500}
 .nav-book:hover{background:var(--gold-light)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:22px;height:1.5px;background:var(--cream);transition:all 0.3s}
 
 /* HERO */
 .hero{height:100vh;min-height:600px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#1C1510 0%,#2E1E0F 40%,#1C1510 100%)}
-.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.35)}
-.hero-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(200,146,42,0.4) 40px,rgba(200,146,42,0.4) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(200,146,42,0.4) 40px,rgba(200,146,42,0.4) 41px)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#000000 0%,#111111 40%,#0D0D0D 100%)}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.55)}
+.hero-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(201,168,76,0.15) 40px,rgba(201,168,76,0.15) 41px),repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(201,168,76,0.15) 40px,rgba(201,168,76,0.15) 41px)}
 .hero-svg{position:absolute;bottom:0;left:0;right:0;width:100%;height:55%}
 .hero-content{position:relative;text-align:center;z-index:2;padding:0 1rem}
 .hero-badge{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;justify-content:center}
@@ -50,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,5.5rem);font-weight:300;line-height:1;letter-spacing:0.05em;color:var(--white);margin-bottom:0.5rem}
 .hero-title em{font-style:italic;color:var(--gold-light)}
 .hero-sub{font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);opacity:0.6;margin-bottom:3rem}
-.hero-cta{display:inline-block;background:var(--gold);color:var(--dark);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2.5rem;border-radius:1px;transition:all 0.3s;font-weight:500}
+.hero-cta{display:inline-block;background:var(--gold);color:#000000;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 2.5rem;border-radius:1px;transition:all 0.3s;font-weight:500}
 .hero-cta:hover{background:var(--gold-light)}
 .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:0.5rem}
 .scroll-line{width:0.5px;height:40px;background:var(--gold);opacity:0.4;animation:scrollAnim 2s ease-in-out infinite}
@@ -65,21 +65,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .divider{width:40px;height:0.5px;background:var(--gold);margin:1.5rem 0;opacity:0.6}
 
 /* ABOUT */
-.about{background:#261C0E}
+.about{background:#141414}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:4rem}
 .about-text p{font-size:0.95rem;line-height:1.9;color:var(--cream);opacity:0.75;margin-bottom:1.2rem}
 .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
-.stat{border-top:0.5px solid rgba(200,146,42,0.3);padding-top:1rem}
+.stat{border-top:0.5px solid rgba(201,168,76,0.25);padding-top:1rem}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold)}
 .stat-label{font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.2rem}
-.about-img-frame{background:linear-gradient(135deg,#2E1E0F 0%,#1C1208 100%);border-radius:2px;padding:2.5rem;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative}
+.about-img-frame{background:linear-gradient(135deg,#1A1A1A 0%,#0A0A0A 100%);border-radius:2px;padding:2.5rem;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative}
 .about-quote{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;font-style:italic;color:var(--cream);line-height:1.5;position:relative;z-index:1}
 .about-quote::before{content:'"';font-size:4rem;color:var(--gold);opacity:0.3;position:absolute;top:-1.5rem;left:-0.5rem;font-family:'Cormorant Garamond',serif;line-height:1}
 
 /* ROOMS */
-.rooms{background:#1C1510}
+.rooms{background:#0D0D0D}
 .rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
-.room-card{background:#2E2218;border-radius:2px;overflow:hidden;border:0.5px solid rgba(200,146,42,0.12);transition:border-color 0.3s,transform 0.3s}
+.room-card{background:#141414;border-radius:2px;overflow:hidden;border:0.5px solid rgba(201,168,76,0.3);transition:border-color 0.3s,transform 0.3s}
 .room-card:hover{border-color:rgba(184,149,90,0.4);transform:translateY(-4px)}
 .room-img{height:200px;overflow:hidden}
 .room-img svg{width:100%;height:100%}
@@ -89,7 +89,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .room-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);font-weight:300}
 .room-price span{font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.1em}
 .room-features{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:0.8rem}
-.feat-tag{font-size:0.65rem;letter-spacing:0.1em;color:var(--gold);border:0.5px solid rgba(200,146,42,0.3);padding:0.25rem 0.6rem;border-radius:1px}
+.feat-tag{font-size:0.65rem;letter-spacing:0.1em;color:var(--gold);border:0.5px solid rgba(201,168,76,0.3);padding:0.25rem 0.6rem;border-radius:1px}
 .room-btn{display:block;margin-top:1.2rem;text-align:center;border:0.5px solid rgba(184,149,90,0.4);color:var(--gold);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.6rem;border-radius:1px;transition:all 0.3s}
 .room-btn:hover{background:var(--gold);color:var(--dark)}
 
@@ -97,7 +97,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .activities{background:var(--mid)}
 .act-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:4rem}
 .act-item{padding:2rem 1.5rem;border:0.5px solid rgba(184,149,90,0.15);border-radius:2px;text-align:center;transition:all 0.3s}
-.act-item:hover{border-color:var(--gold);background:rgba(200,146,42,0.07)}
+.act-item:hover{border-color:var(--gold);background:rgba(201,168,76,0.05)}
 .act-icon{font-size:2rem;margin-bottom:1rem}
 .act-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem}
 .act-desc{font-size:0.75rem;color:var(--muted);line-height:1.6}
@@ -112,7 +112,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .gal-cell:hover .gal-inner{transform:scale(1.04)}
 
 /* CONTACT */
-.contact{background:#261C0E}
+.contact{background:#141414}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem;align-items:start}
 .contact-info p{font-size:0.9rem;line-height:1.8;color:var(--cream);opacity:0.7;margin-bottom:2rem}
 .contact-detail{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
@@ -200,13 +200,13 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
   <div class="hero-overlay"></div>
   <svg class="hero-svg" viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0,500 L0,300 L120,200 L240,280 L380,120 L520,240 L640,80 L760,200 L880,140 L1000,260 L1120,100 L1240,220 L1360,160 L1440,200 L1440,500 Z" fill="#0a1a10" opacity="0.9"/>
-    <path d="M0,500 L0,380 L160,300 L300,360 L450,260 L580,320 L700,200 L820,290 L960,230 L1100,310 L1250,250 L1380,300 L1440,280 L1440,500 Z" fill="#1C1208" opacity="0.95"/>
+    <path d="M0,500 L0,380 L160,300 L300,360 L450,260 L580,320 L700,200 L820,290 L960,230 L1100,310 L1250,250 L1380,300 L1440,280 L1440,500 Z" fill="#111111" opacity="0.95"/>
     <path d="M0,500 L0,430 L200,380 L380,420 L560,360 L740,400 L920,350 L1100,390 L1280,355 L1440,380 L1440,500 Z" fill="#111f16"/>
-    <circle cx="200" cy="280" r="3" fill="#b8955a" opacity="0.6"/>
-    <circle cx="450" cy="350" r="2" fill="#b8955a" opacity="0.4"/>
-    <circle cx="900" cy="300" r="2.5" fill="#b8955a" opacity="0.5"/>
-    <circle cx="1200" cy="320" r="2" fill="#b8955a" opacity="0.3"/>
-    <ellipse cx="720" cy="420" rx="320" ry="40" fill="#2A2010" opacity="0.3"/>
+    <circle cx="200" cy="280" r="3" fill="#C9A84C" opacity="0.6"/>
+    <circle cx="450" cy="350" r="2" fill="#C9A84C" opacity="0.4"/>
+    <circle cx="900" cy="300" r="2.5" fill="#C9A84C" opacity="0.5"/>
+    <circle cx="1200" cy="320" r="2" fill="#C9A84C" opacity="0.3"/>
+    <ellipse cx="720" cy="420" rx="320" ry="40" fill="#1A1A1A" opacity="0.3"/>
   </svg>
   <div class="hero-content">
     <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
@@ -256,16 +256,16 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
           <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.6" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <radialGradient id="sunG" cx="50%" cy="30%" r="50%">
-                <stop offset="0%" stop-color="#b8955a" stop-opacity="0.3"/>
+                <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.3"/>
                 <stop offset="100%" stop-color="#0d2016" stop-opacity="0"/>
               </radialGradient>
             </defs>
             <rect width="400" height="500" fill="url(#sunG)"/>
-            <path d="M0,500 L0,320 L40,280 L80,310 L130,240 L180,270 L220,200 L260,250 L300,220 L340,260 L380,230 L400,250 L400,500 Z" fill="#1C1208"/>
+            <path d="M0,500 L0,320 L40,280 L80,310 L130,240 L180,270 L220,200 L260,250 L300,220 L340,260 L380,230 L400,250 L400,500 Z" fill="#111111"/>
             <path d="M0,500 L0,400 L60,370 L130,390 L200,350 L270,380 L340,355 L400,370 L400,500 Z" fill="#111f16"/>
-            <ellipse cx="200" cy="440" rx="180" ry="30" fill="#2A2010" opacity="0.5"/>
-            <circle cx="200" cy="60" r="18" fill="none" stroke="#b8955a" stroke-width="0.5" opacity="0.4"/>
-            <circle cx="200" cy="60" r="10" fill="#b8955a" opacity="0.15"/>
+            <ellipse cx="200" cy="440" rx="180" ry="30" fill="#1A1A1A" opacity="0.5"/>
+            <circle cx="200" cy="60" r="18" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="200" cy="60" r="10" fill="#C9A84C" opacity="0.15"/>
           </svg>
           <p class="about-quote">Монгол тал нутгийн агуу сүр жавхлан, усны дуу чимээ, одод мандсан тэнгэр.</p>
         </div>
@@ -285,17 +285,17 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
       <article class="room-card">
         <div class="room-img">
           <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-            <rect width="300" height="200" fill="#1C1208"/>
-            <ellipse cx="150" cy="180" rx="130" ry="25" fill="#2A1A08" opacity="0.8"/>
-            <path d="M80,160 L150,60 L220,160 Z" fill="#3D2810"/>
-            <path d="M100,160 L150,80 L200,160 Z" fill="#4A3214"/>
-            <rect x="130" y="135" width="40" height="30" fill="#221508" rx="1"/>
-            <rect x="143" y="135" width="14" height="20" fill="#b8955a" opacity="0.15"/>
-            <circle cx="230" cy="40" r="20" fill="#b8955a" opacity="0.15"/>
-            <circle cx="230" cy="40" r="8" fill="#b8955a" opacity="0.2"/>
-            <circle cx="60" cy="30" r="1.5" fill="#b8955a" opacity="0.5"/>
-            <circle cx="100" cy="20" r="1" fill="#b8955a" opacity="0.4"/>
-            <circle cx="180" cy="35" r="1.5" fill="#b8955a" opacity="0.3"/>
+            <rect width="300" height="200" fill="#111111"/>
+            <ellipse cx="150" cy="180" rx="130" ry="25" fill="#1A1A1A" opacity="0.8"/>
+            <path d="M80,160 L150,60 L220,160 Z" fill="#222222"/>
+            <path d="M100,160 L150,80 L200,160 Z" fill="#2A2A2A"/>
+            <rect x="130" y="135" width="40" height="30" fill="#111111" rx="1"/>
+            <rect x="143" y="135" width="14" height="20" fill="#C9A84C" opacity="0.15"/>
+            <circle cx="230" cy="40" r="20" fill="#C9A84C" opacity="0.15"/>
+            <circle cx="230" cy="40" r="8" fill="#C9A84C" opacity="0.2"/>
+            <circle cx="60" cy="30" r="1.5" fill="#C9A84C" opacity="0.5"/>
+            <circle cx="100" cy="20" r="1" fill="#C9A84C" opacity="0.4"/>
+            <circle cx="180" cy="35" r="1.5" fill="#C9A84C" opacity="0.3"/>
           </svg>
         </div>
         <div class="room-body">
@@ -315,16 +315,16 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
       <article class="room-card">
         <div class="room-img">
           <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-            <rect width="300" height="200" fill="#180F08"/>
-            <rect x="0" y="100" width="300" height="100" fill="#2A2010" opacity="0.6"/>
-            <path d="M0,100 L50,60 L100,80 L150,40 L200,70 L250,50 L300,65 L300,100 Z" fill="#1C1208"/>
+            <rect width="300" height="200" fill="#0A0A0A"/>
+            <rect x="0" y="100" width="300" height="100" fill="#1A1A1A" opacity="0.6"/>
+            <path d="M0,100 L50,60 L100,80 L150,40 L200,70 L250,50 L300,65 L300,100 Z" fill="#111111"/>
             <line x1="0" y1="100" x2="300" y2="100" stroke="#4a8ab5" stroke-width="1" opacity="0.4"/>
             <rect x="110" y="85" width="50" height="38" fill="#1a2830" rx="2"/>
-            <rect x="110" y="85" width="50" height="38" fill="none" stroke="#b8955a" stroke-width="0.5" opacity="0.5"/>
-            <rect x="130" y="85" width="3" height="38" fill="#b8955a" opacity="0.1"/>
-            <circle cx="240" cy="35" r="15" fill="#b8955a" opacity="0.12"/>
-            <circle cx="30" cy="25" r="1.5" fill="#b8955a" opacity="0.4"/>
-            <circle cx="70" cy="15" r="1" fill="#b8955a" opacity="0.3"/>
+            <rect x="110" y="85" width="50" height="38" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/>
+            <rect x="130" y="85" width="3" height="38" fill="#C9A84C" opacity="0.1"/>
+            <circle cx="240" cy="35" r="15" fill="#C9A84C" opacity="0.12"/>
+            <circle cx="30" cy="25" r="1.5" fill="#C9A84C" opacity="0.4"/>
+            <circle cx="70" cy="15" r="1" fill="#C9A84C" opacity="0.3"/>
           </svg>
         </div>
         <div class="room-body">
@@ -345,17 +345,17 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
         <div class="room-img">
           <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
             <rect width="300" height="200" fill="#1a1206"/>
-            <path d="M0,200 L0,140 L60,100 L120,130 L180,90 L240,120 L300,85 L300,200 Z" fill="#3D2810"/>
+            <path d="M0,200 L0,140 L60,100 L120,130 L180,90 L240,120 L300,85 L300,200 Z" fill="#222222"/>
             <path d="M0,200 L0,165 L80,145 L160,155 L240,140 L300,150 L300,200 Z" fill="#1a1206"/>
-            <circle cx="150" cy="50" r="40" fill="#b8955a" opacity="0.08"/>
-            <circle cx="150" cy="50" r="20" fill="#b8955a" opacity="0.06"/>
-            <circle cx="150" cy="50" r="8" fill="#b8955a" opacity="0.18"/>
-            <rect x="105" y="130" width="90" height="55" fill="#3D2810" rx="2"/>
-            <rect x="105" y="130" width="90" height="55" fill="none" stroke="#b8955a" stroke-width="0.5" opacity="0.4"/>
-            <rect x="145" y="130" width="1" height="55" fill="#b8955a" opacity="0.2"/>
+            <circle cx="150" cy="50" r="40" fill="#C9A84C" opacity="0.08"/>
+            <circle cx="150" cy="50" r="20" fill="#C9A84C" opacity="0.06"/>
+            <circle cx="150" cy="50" r="8" fill="#C9A84C" opacity="0.18"/>
+            <rect x="105" y="130" width="90" height="55" fill="#222222" rx="2"/>
+            <rect x="105" y="130" width="90" height="55" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
+            <rect x="145" y="130" width="1" height="55" fill="#C9A84C" opacity="0.2"/>
             <rect x="125" y="152" width="20" height="30" fill="#1a1206"/>
-            <circle cx="40" cy="20" r="1.5" fill="#b8955a" opacity="0.5"/>
-            <circle cx="260" cy="30" r="1" fill="#b8955a" opacity="0.4"/>
+            <circle cx="40" cy="20" r="1.5" fill="#C9A84C" opacity="0.5"/>
+            <circle cx="260" cy="30" r="1" fill="#C9A84C" opacity="0.4"/>
           </svg>
         </div>
         <div class="room-body">
@@ -404,51 +404,51 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
     <div class="gal-cell">
       <div class="gal-inner" style="background:linear-gradient(160deg,#0a1f10 0%,#1a3d2a 100%);height:100%">
         <svg viewBox="0 0 400 404" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <path d="M0,404 L0,200 L80,130 L160,180 L240,80 L320,150 L400,100 L400,404 Z" fill="#1C1208"/>
+          <path d="M0,404 L0,200 L80,130 L160,180 L240,80 L320,150 L400,100 L400,404 Z" fill="#111111"/>
           <path d="M0,404 L0,300 L100,270 L200,290 L300,255 L400,275 L400,404 Z" fill="#0a1a10"/>
-          <ellipse cx="200" cy="350" rx="180" ry="40" fill="#2A2010" opacity="0.5"/>
-          <circle cx="320" cy="60" r="25" fill="#b8955a" opacity="0.1"/>
-          <circle cx="320" cy="60" r="10" fill="#b8955a" opacity="0.2"/>
-          <circle cx="60" cy="40" r="2" fill="#b8955a" opacity="0.4"/>
-          <circle cx="140" cy="25" r="1.5" fill="#b8955a" opacity="0.3"/>
-          <circle cx="200" cy="50" r="1" fill="#b8955a" opacity="0.5"/>
+          <ellipse cx="200" cy="350" rx="180" ry="40" fill="#1A1A1A" opacity="0.5"/>
+          <circle cx="320" cy="60" r="25" fill="#C9A84C" opacity="0.1"/>
+          <circle cx="320" cy="60" r="10" fill="#C9A84C" opacity="0.2"/>
+          <circle cx="60" cy="40" r="2" fill="#C9A84C" opacity="0.4"/>
+          <circle cx="140" cy="25" r="1.5" fill="#C9A84C" opacity="0.3"/>
+          <circle cx="200" cy="50" r="1" fill="#C9A84C" opacity="0.5"/>
         </svg>
       </div>
     </div>
     <div class="gal-cell">
       <div class="gal-inner" style="background:linear-gradient(180deg,#0a1520 0%,#1a3d5c 100%);height:100%">
         <svg viewBox="0 0 300 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="200" fill="#180F08"/>
-          <rect x="0" y="100" width="300" height="100" fill="#2A2010" opacity="0.6"/>
-          <path d="M0,100 L50,60 L100,80 L150,40 L200,70 L250,50 L300,65 L300,100 Z" fill="#1C1208"/>
+          <rect width="300" height="200" fill="#0A0A0A"/>
+          <rect x="0" y="100" width="300" height="100" fill="#1A1A1A" opacity="0.6"/>
+          <path d="M0,100 L50,60 L100,80 L150,40 L200,70 L250,50 L300,65 L300,100 Z" fill="#111111"/>
           <line x1="0" y1="100" x2="300" y2="100" stroke="#4a8ab5" stroke-width="1" opacity="0.4"/>
         </svg>
       </div>
     </div>
     <div class="gal-cell">
-      <div class="gal-inner" style="background:linear-gradient(135deg,#1a1206 0%,#2d1e08 100%);height:100%">
+      <div class="gal-inner" style="background:linear-gradient(135deg,#1A1A1A 0%,#0A0A0A 100%);height:100%">
         <svg viewBox="0 0 300 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="200" fill="#1A1008"/>
-          <circle cx="150" cy="80" r="50" fill="#b8955a" opacity="0.06"/>
-          <g opacity="0.35" fill="#b8955a">
+          <rect width="300" height="200" fill="#111111"/>
+          <circle cx="150" cy="80" r="50" fill="#C9A84C" opacity="0.06"/>
+          <g opacity="0.35" fill="#C9A84C">
             <circle cx="50" cy="30" r="1.5"/><circle cx="90" cy="50" r="1"/>
             <circle cx="200" cy="20" r="2"/><circle cx="250" cy="45" r="1.5"/>
             <circle cx="120" cy="15" r="1"/><circle cx="180" cy="60" r="1"/>
             <circle cx="70" cy="65" r="1.5"/><circle cx="220" cy="70" r="1"/>
           </g>
-          <path d="M0,200 L0,140 L70,110 L140,130 L210,100 L280,120 L300,110 L300,200 Z" fill="#3D2810"/>
+          <path d="M0,200 L0,140 L70,110 L140,130 L210,100 L280,120 L300,110 L300,200 Z" fill="#222222"/>
         </svg>
       </div>
     </div>
     <div class="gal-cell">
-      <div class="gal-inner" style="background:linear-gradient(180deg,#1C1208 0%,#2E1A08 100%);height:100%">
+      <div class="gal-inner" style="background:linear-gradient(180deg,#111111 0%,#1A1A1A 100%);height:100%">
         <svg viewBox="0 0 300 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="200" fill="#1C1208"/>
-          <path d="M60,170 L100,60 L140,170 Z" fill="#2A1A08"/>
-          <path d="M120,170 L170,40 L220,170 Z" fill="#3A2512"/>
-          <path d="M170,170 L210,75 L250,170 Z" fill="#2A1A08"/>
-          <rect x="155" y="130" width="30" height="42" fill="#1C1208"/>
-          <rect x="163" y="130" width="14" height="25" fill="#b8955a" opacity="0.08"/>
+          <rect width="300" height="200" fill="#111111"/>
+          <path d="M60,170 L100,60 L140,170 Z" fill="#1A1A1A"/>
+          <path d="M120,170 L170,40 L220,170 Z" fill="#222222"/>
+          <path d="M170,170 L210,75 L250,170 Z" fill="#1A1A1A"/>
+          <rect x="155" y="130" width="30" height="42" fill="#111111"/>
+          <rect x="163" y="130" width="14" height="25" fill="#C9A84C" opacity="0.08"/>
         </svg>
       </div>
     </div>
