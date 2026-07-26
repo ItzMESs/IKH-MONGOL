@@ -103,17 +103,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .detail-val{font-size:0.85rem;color:var(--cream);opacity:0.75;line-height:1.5}
 .map-wrap{margin-top:2rem;border:0.5px solid rgba(184,134,11,0.3);border-radius:3px;overflow:hidden;filter:grayscale(0.15) contrast(1.05)}
 .map-wrap iframe{width:100%;height:280px;border:0;display:block}
-.contact-form{display:flex;flex-direction:column;gap:1rem}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.form-field{display:flex;flex-direction:column;gap:0.4rem}
-.form-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
-.form-input{background:rgba(255,255,255,0.04);border:0.5px solid rgba(184,149,90,0.25);border-radius:1px;padding:0.8rem 1rem;color:var(--cream);font-size:0.85rem;font-family:'Jost',sans-serif;transition:border-color 0.3s;outline:none;width:100%}
-.form-input:focus{border-color:var(--gold)}
-.form-input::placeholder{color:var(--muted)}
-textarea.form-input{resize:none;height:120px}
-.submit-btn{background:var(--gold);color:var(--dark);border:none;padding:1rem;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;border-radius:1px;transition:background 0.3s;margin-top:0.5rem;width:100%}
-.submit-btn:hover{background:var(--gold-light)}
-.success-msg{display:none;background:rgba(74,122,85,0.15);border:0.5px solid rgba(74,122,85,0.4);color:#7dc896;padding:1rem;border-radius:2px;font-size:0.82rem;text-align:center;letter-spacing:0.05em}
+.call-panel{display:flex;flex-direction:column;gap:1rem;background:rgba(255,255,255,0.03);border:0.5px solid rgba(184,149,90,0.25);border-radius:3px;padding:2rem}
+.call-panel-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--cream)}
+.call-panel-sub{font-size:0.82rem;color:var(--muted);line-height:1.6;margin-top:-0.6rem;margin-bottom:0.4rem}
+.call-btn{display:flex;align-items:center;gap:1rem;background:var(--gold);color:#000;text-decoration:none;padding:1rem 1.2rem;border-radius:2px;transition:background 0.3s,transform 0.2s}
+.call-btn:hover{background:var(--gold-light);transform:translateY(-1px)}
+.call-btn-icon{font-size:1.3rem;line-height:1}
+.call-btn-label{display:block;font-size:0.95rem;font-weight:500;letter-spacing:0.02em}
+.call-btn-note{display:block;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.7;margin-top:0.15rem}
+.call-btn-secondary{background:transparent;border:0.5px solid rgba(184,149,90,0.4);color:var(--cream)}
+.call-btn-secondary:hover{background:rgba(184,149,90,0.1)}
+
 
 /* FOOTER */
 footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
@@ -142,7 +142,6 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
 }
 @media(max-width:500px){
   .act-grid{grid-template-columns:1fr 1fr}
-  .form-row{grid-template-columns:1fr}
 }
 
 /* PARTNERS */
@@ -453,58 +452,37 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
         </div>
         <div class="contact-detail">
           <div class="detail-label">Сошиал</div>
-          <div class="detail-val">Facebook: @Их Монгол жуулчны бааз</div>
+          <div class="detail-val"><a href="https://www.facebook.com/IkhMongol8" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Facebook: @Их Монгол жуулчны бааз</a></div>
         </div>
         <div class="map-wrap">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.3683791857634!2d96.97367367608179!3d47.813078371209514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d68d706be4a2475%3A0xa0d17a56fdf5d40e!2z0JjRhSDQnNC-0L3Qs9C-0Lsg0JbRg9GD0LvRh9C90Ysg0JHQsNCw0Lc!5e0!3m2!1sen!2smn!4v1785085968017!5m2!1sen!2smn" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="Их Монгол Жуулчны Бааз - байршил"></iframe>
         </div>
       </div>
       <div>
-        <div class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-field">
-              <label class="form-label" for="fname">Нэр · Name</label>
-              <input class="form-input" id="fname" type="text" placeholder="Таны нэр">
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="fphone">Утас · Phone</label>
-              <input class="form-input" id="fphone" type="tel" placeholder="+976 ···· ····">
-            </div>
-          </div>
-          <div class="form-field">
-            <label class="form-label" for="femail">И-мэйл · Email</label>
-            <input class="form-input" id="femail" type="email" placeholder="example@mail.com">
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label class="form-label" for="fcheckin">Ирэх огноо · Check-in</label>
-              <input class="form-input" id="fcheckin" type="date">
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="fcheckout">Явах огноо · Check-out</label>
-              <input class="form-input" id="fcheckout" type="date">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label class="form-label" for="fguests">Хүний тоо · Guests</label>
-              <input class="form-input" id="fguests" type="number" placeholder="2" min="1" max="30">
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="froom">Өрөөний төрөл · Room</label>
-              <select class="form-input" id="froom">
-                <option value="">Сонгоно уу...</option>
-                <option value="ger">Монгол Гэр — ₮80,000</option>
-                <option value="lake">Модон Байшин — ₮80,000</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-field">
-            <label class="form-label" for="fmsg">Мэдэгдэл · Message</label>
-            <textarea class="form-input" id="fmsg" placeholder="Тусгай хүсэлт эсвэл асуулт... / Special requests or questions..."></textarea>
-          </div>
-          <button class="submit-btn" onclick="handleSubmit()">Захиалга илгээх · Send Inquiry</button>
-          <div class="success-msg" id="successMsg">✓ Захиалга амжилттай илгээгдлээ! Бид удахгүй холбогдох болно.<br>Your inquiry has been sent. We will contact you shortly.</div>
+        <div class="call-panel">
+          <div class="call-panel-title">Шууд холбогдож захиалга өгөх</div>
+          <div class="call-panel-sub">Call us directly to book — fastest way to confirm your dates.</div>
+          <a class="call-btn" href="tel:+97694928686">
+            <span class="call-btn-icon">📞</span>
+            <span>
+              <span class="call-btn-label">+976 9492 8686</span>
+              <span class="call-btn-note">Үндсэн шугам · Main line</span>
+            </span>
+          </a>
+          <a class="call-btn" href="tel:+97689461111">
+            <span class="call-btn-icon">📞</span>
+            <span>
+              <span class="call-btn-label">+976 8946 1111</span>
+              <span class="call-btn-note">Нөөц шугам · Alternate line</span>
+            </span>
+          </a>
+          <a class="call-btn call-btn-secondary" href="https://m.me/IkhMongol8" target="_blank" rel="noopener">
+            <span class="call-btn-icon">💬</span>
+            <span>
+              <span class="call-btn-label">Messenger-ээр бичих</span>
+              <span class="call-btn-note">Message us on Facebook</span>
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -578,29 +556,6 @@ window.addEventListener('scroll',()=>{
     nav.style.padding='1.2rem 4rem';
   }
 });
-
-// Form submit
-function handleSubmit(){
-  const name=document.getElementById('fname').value.trim();
-  const email=document.getElementById('femail').value.trim();
-  if(!name||!email){
-    alert('Нэр болон и-мэйл хаягаа оруулна уу.\nPlease enter your name and email.');
-    return;
-  }
-  const btn=document.querySelector('.submit-btn');
-  btn.disabled=true;
-  btn.textContent='Илгээж байна...';
-  setTimeout(()=>{
-    btn.style.display='none';
-    const msg=document.getElementById('successMsg');
-    msg.style.display='block';
-    // Reset form values
-    ['fname','fphone','femail','fcheckin','fcheckout','fguests','froom','fmsg'].forEach(id=>{
-      const el=document.getElementById(id);
-      if(el)el.value='';
-    });
-  },1200);
-}
 
 // Keyboard nav for hamburger
 document.querySelector('.hamburger').addEventListener('keydown',e=>{
