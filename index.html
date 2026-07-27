@@ -202,6 +202,42 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
   transition:opacity 0.6s ease;
   text-shadow:0 1px 4px rgba(0,0,0,0.5);
 }
+
+/* VIDEO / 360 TOUR */
+.video{background:#0D0D0D}
+.video .label{color:var(--gold-light)}
+.video .heading{color:var(--white)}
+.video-frame{margin-top:3rem;position:relative;width:100%;aspect-ratio:16/9;border-radius:3px;overflow:hidden;border:0.5px solid rgba(184,149,90,0.3);background:#1A1208}
+.video-frame iframe{width:100%;height:100%;border:0;display:block}
+.video-tabs{display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap}
+.video-tab{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);border:0.5px solid rgba(184,149,90,0.3);padding:0.6rem 1.2rem;border-radius:2px;cursor:pointer;transition:all 0.3s;background:transparent}
+.video-tab.active,.video-tab:hover{color:#000;background:var(--gold);border-color:var(--gold)}
+
+/* WEATHER + SOCIAL */
+.pulse{background:var(--mid)}
+.pulse-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:2rem;margin-top:3rem;align-items:stretch}
+.weather-card{background:linear-gradient(135deg,#2C1F0A 0%,#1A1208 100%);border-radius:3px;padding:2rem;color:var(--white);display:flex;flex-direction:column;justify-content:center;gap:0.6rem}
+.weather-loc{font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-light);opacity:0.9}
+.weather-main{display:flex;align-items:center;gap:1.2rem;margin-top:0.4rem}
+.weather-icon{font-size:2.8rem;line-height:1}
+.weather-temp{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300}
+.weather-desc{font-size:0.85rem;opacity:0.8;margin-top:0.4rem}
+.weather-meta{display:flex;gap:1.5rem;margin-top:1rem;font-size:0.72rem;opacity:0.75;letter-spacing:0.04em}
+.social-card{background:#FFFFFF;border:0.5px solid rgba(184,134,11,0.2);border-radius:3px;padding:2rem;display:flex;flex-direction:column;gap:1rem}
+.social-head{display:flex;align-items:center;justify-content:space-between}
+.social-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:#1A1208}
+.social-follow{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);border:0.5px solid rgba(184,134,11,0.4);padding:0.5rem 1rem;border-radius:2px;transition:all 0.3s}
+.social-follow:hover{background:var(--gold);color:#000}
+.social-embeds{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.social-embed-box{border-radius:2px;overflow:hidden;background:#F0EDE8;min-height:340px;display:flex;align-items:center;justify-content:center}
+.social-embed-box iframe{width:100%;height:340px;border:0}
+.ig-placeholder{padding:1.5rem;text-align:center;color:var(--muted);font-size:0.78rem;line-height:1.6}
+
+@media(max-width:900px){
+  .video-frame{aspect-ratio:4/3}
+  .pulse-grid{grid-template-columns:1fr}
+  .social-embeds{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -214,7 +250,6 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
     <a href="#about">Бидний тухай</a>
     <a href="#rooms">Өрөөнүүд</a>
     <a href="gallery.html" target="_blank">Зургийн цомог</a>
-    
     
     <a href="#partners">Хамтрагчид</a>
     <a href="#contact">Холбоо барих</a>
@@ -232,7 +267,6 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
   <a href="#about" onclick="toggleMenu()">Бидний тухай</a>
   <a href="#rooms" onclick="toggleMenu()">Өрөөнүүд</a>
   <a href="gallery.html" target="_blank" onclick="toggleMenu()">Зургийн цомог</a>
-  
   
   <a href="#partners" onclick="toggleMenu()">Хамтрагчид</a>
   <a href="#contact" onclick="toggleMenu()">Захиалга өгөх</a>
@@ -391,6 +425,64 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
 
 
 
+<!-- VIDEO / 360 TOUR -->
+<section class="video section" id="video-tour">
+  <div class="section-inner">
+    <div class="label">Танилцуулга · Experience</div>
+    <h2 class="heading">Байрлалаа <em>урьдчилж мэдэр</em></h2>
+    <div class="divider"></div>
+    <div class="video-frame" id="videoFrame">
+      <iframe id="videoIframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Их Монгол Жуулчны Бааз — видео танилцуулга" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-tabs">
+      <button class="video-tab active" onclick="showVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', this)">🎬 Видео танилцуулга</button>
+      <button class="video-tab" onclick="showVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', this)">🧭 360° Аймшиг тойрог · Baaz Tour</button>
+      <button class="video-tab" onclick="showVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', this)">🏕️ Гэрийн дотоод · Ger Interior</button>
+    </div>
+    <p style="font-size:0.78rem;color:var(--muted);margin-top:1rem;max-width:600px;">Дээрх видеог өөрийн YouTube линк (жинхэнэ видео/360° тойрогоор) солиход бэлэн — <code style="opacity:0.8">videoIframe</code> src-г солино уу.</p>
+  </div>
+</section>
+
+<!-- WEATHER + SOCIAL -->
+<section class="pulse section" id="pulse">
+  <div class="section-inner">
+    <div class="label">Одоо · Right Now</div>
+    <h2 class="heading">Цаг агаар & <em>сүүлийн мэдээлэл</em></h2>
+    <div class="pulse-grid">
+      <div class="weather-card">
+        <div class="weather-loc">📍 Улиастай · Завхан аймгийн төв</div>
+        <div class="weather-main">
+          <div class="weather-icon" id="wxIcon">⛅</div>
+          <div class="weather-temp" id="wxTemp">–°C</div>
+        </div>
+        <div class="weather-desc" id="wxDesc">Уншиж байна...</div>
+        <div class="weather-meta">
+          <span id="wxWind">💨 – км/ц</span>
+          <span id="wxUpdated">Шинэчлэгдсэн: –</span>
+        </div>
+      </div>
+      <div class="social-card">
+        <div class="social-head">
+          <div class="social-title">Биднийг дагаарай</div>
+          <a class="social-follow" href="https://www.facebook.com/IkhMongol8" target="_blank" rel="noopener">Facebook дээр дагах</a>
+        </div>
+        <div class="social-embeds">
+          <div class="social-embed-box">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIkhMongol8&tabs=timeline&width=340&height=340&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Facebook feed"></iframe>
+          </div>
+          <div class="social-embed-box">
+            <div class="ig-placeholder">
+              📷 Instagram feed<br><br>
+              Instagram хаягаа (жишээ нь <strong>@ikhmongol</strong>) баталгаажуулсны дараа доорх байрлалд<br>
+              <em>elfsight / SnapWidget / LightWidget</em> зэрэг үнэгүй Instagram embed скрипт оруулж болно.<br><br>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Instagram хуудас нээх →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- PARTNERS -->
@@ -497,7 +589,6 @@ footer{background:var(--dark);border-top:0.5px solid rgba(184,149,90,0.15);paddi
     <a href="#about">Бидний тухай</a>
     <a href="#rooms">Өрөөнүүд</a>
     <a href="gallery.html" target="_blank">Зургийн цомог</a>
-    
     <a href="#partners">Хамтрагчид</a>
     <a href="#contact">Холбоо барих</a>
   </div>
@@ -578,6 +669,49 @@ document.querySelectorAll('.room-card,.act-item,.stat').forEach(el=>{
   el.style.transition='opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// Video / 360 tab switcher
+function showVideo(src, btn){
+  document.getElementById('videoIframe').src = src;
+  document.querySelectorAll('.video-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// Weather widget — Uliastai, Zavkhan aimag center (Open-Meteo, no API key needed)
+(function(){
+  const lat = 47.7413, lon = 96.8375;
+  const iconEl = document.getElementById('wxIcon');
+  const tempEl = document.getElementById('wxTemp');
+  const descEl = document.getElementById('wxDesc');
+  const windEl = document.getElementById('wxWind');
+  const updEl = document.getElementById('wxUpdated');
+
+  const wmoMap = {
+    0:['☀️','Цэлмэг'],1:['🌤️','Голдуу цэлмэг'],2:['⛅','Хэсэгчлэн үүлтэй'],3:['☁️','Үүлтэй'],
+    45:['🌫️','Манантай'],48:['🌫️','Мөндөр манан'],
+    51:['🌦️','Бага зэргийн шаагилуур'],53:['🌦️','Шаагилуур'],55:['🌧️','Хүчтэй шаагилуур'],
+    61:['🌧️','Бага зэргийн бороо'],63:['🌧️','Бороо'],65:['🌧️','Хүчтэй бороо'],
+    71:['🌨️','Бага зэргийн цас'],73:['🌨️','Цас'],75:['❄️','Хүчтэй цас'],
+    80:['🌦️','Аадар бороо'],81:['🌧️','Хүчтэй аадар'],82:['⛈️','Их хүчтэй аадар'],
+    95:['⛈️','Аянга цахилгаантай'],96:['⛈️','Аянга, мөндөртэй'],99:['⛈️','Хүчтэй аянга']
+  };
+
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m,weather_code&timezone=auto`)
+    .then(r => r.json())
+    .then(data => {
+      const c = data.current;
+      const [icon, desc] = wmoMap[c.weather_code] || ['⛅','Тодорхойгүй'];
+      iconEl.textContent = icon;
+      tempEl.textContent = Math.round(c.temperature_2m) + '°C';
+      descEl.textContent = desc;
+      windEl.textContent = '💨 ' + Math.round(c.wind_speed_10m) + ' км/ц';
+      const t = new Date(c.time);
+      updEl.textContent = 'Шинэчлэгдсэн: ' + t.getHours().toString().padStart(2,'0') + ':' + t.getMinutes().toString().padStart(2,'0');
+    })
+    .catch(() => {
+      descEl.textContent = 'Цаг агаарын мэдээлэл ачаалж чадсангүй';
+    });
+})();
 </script>
 </body>
 </html>
